@@ -38,6 +38,9 @@ jobs:
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
+          - name: Debug workspace
+  run: ls -la
+
         run: npx eslint .
           --config .eslintrc.js
           --ext .js,.jsx,.ts,.tsx
