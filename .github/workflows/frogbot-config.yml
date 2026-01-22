@@ -1,0 +1,18 @@
+version: 1
+
+scan:
+  # Fail the scan only on high or critical issues
+  failOnSeverity: high
+
+  # Include only direct dependencies to reduce noise
+  includeAllVulnerabilities: false
+
+  # Ignore issues without a fix available
+  includeFixedIssues: false
+
+  # Scan package managers automatically
+  scanners:
+    - npm
+    - pip
+    - maven
+    - gradle
