@@ -1,0 +1,21 @@
+name: Frogbot Scan
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  frogbot-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Frogbot
+        uses: jfrog/frogbot@v2
+        env:
+          JF_URL: ${{ secrets.JF_URL }}
+          JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+          JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JF_CONFIG_PATH: .jfrog/frogbot-config.yml
