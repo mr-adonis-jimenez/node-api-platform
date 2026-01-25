@@ -1,16 +1,10 @@
 version: 1
 
 scan:
-  # Fail the scan only on high or critical issues
-  failOnSeverity: high
+  fail_on_severity: high
+  include_all_vulnerabilities: false
+  include_fixed_issues: false
 
-  # Include only direct dependencies to reduce noise
-  includeAllVulnerabilities: false
-
-  # Ignore issues without a fix available
-  includeFixedIssues: false
-
-  # Scan package managers automatically
   scanners:
     - npm
     - pip
