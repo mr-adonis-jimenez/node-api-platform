@@ -1,4 +1,4 @@
-# My Node Project
+# Node API Platform
 
 A production-ready Node.js REST API built with Express.js, featuring security best practices, comprehensive error handling, logging, and testing.
 
@@ -24,7 +24,7 @@ A production-ready Node.js REST API built with Express.js, featuring security be
 
 ```bash
 # Clone the repository
-git clone https://github.com/mr-adonis-jimenez/my-node-project.git
+git clone https://github.com/mr-adonis-jimenez/node-api-platform.git
 cd my-node-project
 
 # Install dependencies
@@ -132,7 +132,7 @@ curl -X DELETE http://localhost:3000/api/users/1
 ## Project Structure
 
 ```
-my-node-project/
+node-api-platform/
 ├── src/
 │   ├── __tests__/          # Test files
 │   │   └── users.test.js
