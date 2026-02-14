@@ -6,14 +6,14 @@ A production-ready Node.js REST API built with Express.js, featuring security be
 
 - ✅ **Express.js** - Fast, unopinionated web framework
 - ✅ **Security** - Helmet, CORS, rate limiting
-- ✅ **Validation** - Request validation with express-validator
+- ✅ **Validation** - Input validation on API endpoints
 - ✅ **Error Handling** - Centralized error handling middleware
-- ✅ **Logging** - Winston logger with file rotation
-- ✅ **Testing** - Jest with Supertest
-- ✅ **Code Quality** - ESLint + Prettier
+- ✅ **Logging** - Structured console logger
+- ✅ **Testing** - Mocha with Supertest
+- ✅ **Code Quality** - ESLint
 - ✅ **Environment Config** - dotenv for configuration
 - ✅ **Compression** - Response compression
-- ✅ **ES Modules** - Modern JavaScript syntax
+- ✅ **CommonJS** - Node.js module syntax
 
 ## Prerequisites
 
@@ -146,9 +146,8 @@ node-api-platform/
 │   └── index.js           # Application entry point
 ├── logs/                  # Log files (auto-generated)
 ├── .env.example          # Environment variables template
-├── .eslintrc.json        # ESLint configuration
+├── .eslintrc.js          # ESLint configuration
 ├── .gitignore           # Git ignore rules
-├── jest.config.js       # Jest configuration
 ├── package.json         # Project dependencies
 └── README.md           # This file
 ```

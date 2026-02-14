@@ -1,13 +1,20 @@
 {
-  "name": "my-node-project",
+  "name": "node-api-platform",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A production-ready Node.js REST API built with Express.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "mocha src/__tests__/**/*.test.js --exit",
+    "test:watch": "mocha src/__tests__/**/*.test.js --watch",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "security:audit": "npm audit",
+    "security:fix": "npm audit fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "Adonis Jimenez",
   "license": "ISC",
   "type": "commonjs",
   "directories": {
@@ -15,19 +22,17 @@
     "test": "test"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0"
   },
   "devDependencies": {
     "eslint": "^9.39.2",
     "mocha": "^11.7.5",
-    "nodemon": "^3.1.11"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/<your-username>/my-node-project.git"
-  },
-  "bugs": {
-    "url": "https://github.com/<your-username>/my-node-project/issues"
-  },
-  "homepage": "https://github.com/<your-username>/my-node-project#readme"
+    "nodemon": "^3.1.11",
+    "supertest": "^7.1.0"
+  }
 }
