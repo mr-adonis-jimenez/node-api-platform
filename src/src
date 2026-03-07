@@ -1,38 +1,44 @@
-node-api-platform/
-├── src/
-│   ├── controllers/
-│   │   └── userController.ts
-│   ├── models/
-│   │   └── userModel.ts
-│   ├── routes/
-│   │   └── userRoutes.ts
-│   ├── services/
-│   │   └── userService.ts
-│   ├── middlewares/
-│   │   ├── errorMiddleware.ts
-│   │   └── rateLimiter.ts
-│   ├── config/
-│   │   └── env.ts
-│   ├── utils/
-│   │   └── logger.ts
-│   └── index.ts
-├── docs/
-│   └── api.md
-├── tests/
-│   └── user.test.ts
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-├── .husky/
-│   └── pre-commit
-├── .env.example
-├── .gitignore
-├── .eslintrc.json
-├── .prettierrc
-├── Dockerfile
-├── docker-compose.yml
-├── LICENSE
-├── README.md
-├── package.json
-├── tsconfig.json
-└── jest.config.ts
+{
+  "name": "node-api-platform",
+  "version": "1.0.0",
+  "description": "Opinionated Node.js backend template for production-ready REST APIs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "test": "jest --coverage",
+    "lint": "eslint src/ --ext .ts",
+    "format": "prettier --write src/",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.6.1",
+    "winston": "^3.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.4.1",
+    "@types/supertest": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  },
+  "author": "Adonis",
+  "license": "MIT"
+}
