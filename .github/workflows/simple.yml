@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'          # or whatever version this repo uses
+          node-version: '18'
           cache: 'npm'                # enable npm cache
 
       - name: Install dependencies
